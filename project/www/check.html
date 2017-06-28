@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>check</title>
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<form name="chbox">
+<ons-page>
+  <ons-toolbar>
+    <div class="center">就活チェックリスト</div>
+  </ons-toolbar>
+
+  <ons-list>
+
+    <ons-list-header></ons-list-header>
+
+    <ons-list-item modifier="tappable">
+      <label class="checkbox checkbox--noborder checkbox--list-item">
+        <input type="checkbox"value="1">
+        <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+        インターンに行った
+      </label>
+    </ons-list-item>
+
+    <ons-list-item modifier="tappable">
+      <label class="checkbox checkbox--noborder checkbox--list-item">
+        <input type="checkbox"value="1">
+        <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+        OB訪問をした
+      </label>
+    </ons-list-item>
+
+    <ons-list-item modifier="tappable">
+      <label class="checkbox checkbox--noborder checkbox--list-item">
+        <input type="checkbox"value="1">
+        <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+        使い回せる自己PR文は書いた
+      </label>
+    </ons-list-item>
+
+    <ons-list-item modifier="tappable">
+      <label class="checkbox checkbox--noborder checkbox--list-item">
+        <input type="checkbox"value="1">
+        <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+        企業20社以上にプレエントリーした
+      </label>
+    </ons-list-item>
+
+    <ons-list-item modifier="tappable">
+      <label class="checkbox checkbox--noborder checkbox--list-item">
+        <input type="checkbox"value="1">
+        <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+        企業、業界研究をした
+      </label>
+    </ons-list-item>
+
+    <ons-list-item modifier="tappable">
+      <label class="checkbox checkbox--noborder checkbox--list-item">
+        <input type="checkbox"value="1">
+        <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+        模擬面接を受けた
+      </label>
+    </ons-list-item>
+
+    <ons-list-item modifier="tappable">
+      <label class="checkbox checkbox--noborder checkbox--list-item">
+        <input type="checkbox"value="1">
+        <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+        自己分析をした
+      </label>
+    </ons-list-item>
+
+    <ons-list-item modifier="tappable">
+      <label class="checkbox checkbox--noborder checkbox--list-item">
+        <input type="checkbox"value="1">
+        <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+        オープンESを書いた
+      </label>
+    </ons-list-item>
+
+    <ons-list-item modifier="tappable">
+      <label class="checkbox checkbox--noborder checkbox--list-item">
+        <input type="checkbox"value="1">
+        <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+        英語の資格を取得した（TOEIC600以上か英検2級以上）
+      </label>
+    </ons-list-item>
+
+    <ons-list-item modifier="tappable">
+      <label class="checkbox checkbox--noborder checkbox--list-item">
+        <input type="checkbox"value="1">
+        <div class="checkbox__checkmark checkbox--noborder__checkmark checkbox--list-item__checkmark"></div>
+        筆記試験対策を十分やった
+      </label>
+    </ons-list-item>
+
+  </ons-list>
+  
+  <br>
+  
+<center>
+<ons-button onclick='boxCheck()' class='choices'>成績へ送信</ons-button><br><br>
+<ons-button onclick='javascript:history.back()' class='choices'>ホームへ戻る</ons-button>
+
+</center>
+
+</ons-page>
+</form>
+<script>
+function boxCheck(){
+  var str=0;//チェックされた項目を記録する変数
+//  window.localStorage.setItem("point",1);
+//  alert(window.localStorage.getItem("point"));
+  //for文でチェックボックスを１つずつ確認
+  for( i=0; i<10; i++ )
+  {
+    //チェックされているか確認する
+    if( document.chbox.elements[i].checked )
+    {
+      //チェックボックスのvalue値を変数strに入れる
+      str=str+parseInt(document.chbox.elements[i].value);
+      window.localStorage.setItem("syuukatupoint",str);
+    }
+    
+  }
+}
+</script>
+</body>
+</html>
