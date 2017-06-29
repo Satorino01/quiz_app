@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ <div id="container">
+ <h1>就活対策<br>～「SPI3」毎日10問～</h1><hr>
+
+ <script type="text/javascript">
+var num1 = localStorage.getItem("saisinseikaisuu");
+var num2 = localStorage.getItem("syuukatupoint");
+var sum = parseInt(num1) + parseInt(num2);
+//alert(sum);
+if(sum==20){document.write("　あなたの就活生ランク：".bold()+"S".fontcolor("olive").fontsize(6).bold()+'<br>'+'<br>');
+document.write("　\"どんな会社にでもいけるでしょう\"".bold());}
+else if(sum<20&&sum>=15){document.write("　あなたの就活生ランク：".bold()+"A".fontcolor("purple").fontsize(5).bold()+'<br>'+'<br>');
+document.write("　\"東証一部上場の大手にいけるでしょう\"".bold());}
+else if(sum<15&&sum>=10){document.write("　あなたの就活生ランク：".bold()+"B".fontcolor("blue").fontsize(5).bold()+'<br>'+'<br>');
+document.write("　\"東証二部上場の企業にはいけるでしょう\"".bold());}
+else if(sum<10&&sum>=5){document.write("　あなたの就活生ランク：".bold()+"C".fontcolor("orange").fontsize(4).bold()+'<br>'+'<br>');
+document.write("　\"中小企業ならいけるかもしれません\"".bold());}
+else if(sum<5&&sum>=0){document.write("　あなたの就活生ランク：".bold()+"D".fontcolor("red").fontsize(4).bold()+'<br>'+'<br>');
+document.write("　\"就職は無理です。もっとがんばりましょう\"".bold());}
+
+document.write("<p>" +"　前回の成績：".bold()+ localStorage.getItem("saisinseikaisuu").bold() +"/10".bold()+ "</p>");
+document.write("<p>" +"　チェックリストの成績：".bold()+ localStorage.getItem("syuukatupoint").bold() +"/10".bold()+ "</p>");
+ </script> 
+ <noscript>JavaScriptがOFFとなっており成績を閲覧できません。</noscript><!javascriptが使えない場合>
+ 
+ <br><hr>
+ <CENTER>
+ <input type="button"  div class="button2" value="問題開始" onClick="location.href='mondai.html'"><br><br>
+ <ons-button onclick="location.href='check.html'" class='choices'>就活チェックリスト</ons-button><br>
+ <!input type="button"  value="xxx" onClick="sample_for_3();"><!br>
+ <!input type="button"  value="xxx" onClick="sample_for_4();"><!br>
+ <!input type="button"  value="xxx" onClick="sample_for_5();"><!br>
+ </CENTER>
+
+</body>
+</html>
