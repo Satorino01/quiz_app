@@ -1,0 +1,68 @@
+/*@media only screen and (max-width: 767px) {
+  body {
+    background-image: url(haikei.jpg);
+  }
+*/
+html{
+    height:100%;
+}
+
+body {
+    /* 画像ファイルの指定 */
+  background-image: url(haikei.jpg);
+   
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center center;
+   
+  /* 画像をタイル状に繰り返し表示しない */
+  background-repeat: no-repeat;
+   
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;
+   
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
+   
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  background-color:#ccffff;
+    
+}
+
+h1 {
+    text-shadow: 0 -2px 0 #999;
+    text-align: center;
+    font-size: 30px;
+    padding: 0;
+    margin: 30px 0 30px 0;
+    color: black;
+}
+/*<p><span style="background-image:url(images/co.jpg);"width="300" height="100">*/
+.sample002 {
+ z-index: 2;
+ position: absolute;
+ top: 50px;
+ left: 50px;
+ width: 300px;
+ height: 100px;
+ background-image:url(images/co.png);
+}
+.button2 {
+    font-size: 50px;
+    background-color: #06a8d7;
+	border: 3px solid #000000;
+	color: #fff;
+	line-height: 70px;
+    width: 250px;
+    border-radius:8px;
+    box-shadow:2px 2px 2px #555;
+}
+.button2:hover {
+	background-color: #fff;
+    color: #59b1eb;
+	border-color:#59b1eb;
+    box-shadow:0px 0px 0px #555;
+}
+.choices{   
+    width:80%;   
+    text-align:center; }
+#text_s{text-align:center; }
